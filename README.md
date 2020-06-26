@@ -1,2 +1,2 @@
 # foodfy
- Explore recipes and find amazing chefs.
+ Explore recipes created by chefs from all over the world.
