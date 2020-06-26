@@ -33,7 +33,7 @@
 
 .recipe:hover {
     transform: scale(1.1);
-    font-weight: bold;
+    cursor: pointer;
 }
 
 /*== MODAL ==*/
