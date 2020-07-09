@@ -27,85 +27,10 @@
     line-height: 16px;
     font-weight: normal;
     margin-top: 5px;
-    color: #777777;
+    color: var(--dark-grey);
 }
 
 .recipe:hover {
     transform: scale(1.1);
-    cursor: pointer;
-}
-
-/*== MODAL ==*/
-
-.modal-overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal {
-    background-color: white;
-    border-radius: 16px;
-    max-width: 86vh;
-    max-height: 54vh;
-    width: 100%;
-    height: 100%;
-    margin: 25vh auto;
-    position: relative;
-}
-
-.modal-content {
-    position: absolute;
-    max-width: 78vh;
-    max-height: 46vh;
-    width: 100%;
-    height: 100%;
-    margin: 4vh;
-}
-
-.modal-content img {
-    max-width: 78vh;
-    max-height: 26vh;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    object-fit: cover;
-}
-
-.modal-content h1 {
-    color: #111111;
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 28px;
-    text-align: center;
-    margin-top: 2vh;
-}
-
-.modal-content p {
-    color: #777777;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    margin-top: 0.5vh;
-    margin-bottom: 7vh;
-}
-
-.close-modal {
-    color: #999999;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 19px;
-    
-    display: flex;
-    justify-content: center;
     cursor: pointer;
 }
