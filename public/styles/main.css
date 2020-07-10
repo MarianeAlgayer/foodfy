@@ -12,13 +12,21 @@
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
-    color: var(--medium-black);
-    text-align: justify;
-
+    box-sizing: border-box;
     margin: 0;
     border: 0;
     padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--medium-black);
+    font-size: 1.6rem;
+    text-align: justify;
 }
 
 #content {
@@ -43,17 +51,17 @@
 #logo {
     font-family: 'Judson', serif;
     color: var(--medium-black);
-    font-size: 30px;
-    line-height: 33px;
+    font-size: 3rem;
+    line-height: 3.3rem;
     padding-right: 5vw;
-    letter-spacing: 1.65px;
+    letter-spacing: 0.165rem;
     text-decoration: none;
 }
 
 #menu a {
     color: var(--medium-black);
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
     padding-left: 30px;
     text-decoration: none;
 }
@@ -78,7 +86,7 @@ footer {
 
 footer p {
     color: var(--medium-grey);
-    font-size: 14px;
+    font-size: 1.4rem;
     text-align: center;
     padding-top: 23px;
 }

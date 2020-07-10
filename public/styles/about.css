@@ -1,26 +1,25 @@
 @charset "UTF-8";
 
 #content h1 {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
     color: var(--medium-black);
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
 #content h2 {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
     color: var(--medium-black);
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
 #content p {
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
     color: var(--darker-grey);
-    line-height: 28px;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    font-weight: normal;
     margin-bottom: 30px;
 }

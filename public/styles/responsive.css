@@ -1,4 +1,8 @@
-@media (max-width:450px){
+@media (max-width:450px) {
+
+    html {
+        font-size: 60%;
+    }
 
     /*== HOME ==*/
 
@@ -6,26 +10,43 @@
         height: 600px;
     }
 
-    /*== RECIPES ==*/
-    
     #intro hgroup {
         margin: 100px 45px;
+        text-align: center;
     }
 
+    /*== RECIPES ==*/
+    
     #recipes {
         display: grid;
         grid-template-columns: 1fr;
     }
 
+    /*== RECIPE ==*/
+
+    .recipe-details {
+        margin: 10px 0 50px 0;
+    }
+
+    .recipe-details h1 {
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+    }
+
+    .recipe-details p {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+    }
+
     /*== NOT-FOUND ==*/
 
-    img {
+    .tomato-splat {
         margin: 50px auto 0;
         max-width: 300px;
     }    
 }
 
-@media (min-width:450px) and (max-width: 800px){
+@media (min-width:450px) and (max-width: 800px) {
 
     #content {
         max-width: 500px;
