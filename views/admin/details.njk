@@ -1,19 +1,25 @@
-{% extends 'layout.njk' %}
+{% extends 'admin/layout.njk' %}
 
 {% block head %}
 
-    <title>Foodfy | {{ recipe.title }}</title>
-    <link rel="stylesheet" href="/styles/recipe.css">
+    <title>Foodfy | Details {{ recipe.title }}</title>
+    <link rel="stylesheet" href="/styles/admin_details.css">
 
 {% endblock %}
 
 {% block content %}
 
     <main id="content">
+
+        <div class="title">
+            <h2>Recipe: {{ recipe.title }}</h2>
+            <a href="/admin/recipes/{{ recipe.id }}/edit">Edit recipe</a>
+        </div>
+
         <div class="recipe">
             <section class="recipe-intro">
                 <div class="recipe-image-intro">
-                    <img src="{{ recipe.image_02 }}" alt="{{ recipe.title }}">
+                    <img src="{{ recipe.image_url }}" alt="{{ recipe.title }}">
                 </div>
                 <div class="recipe-details">
                     <h1 class="recipe-name">{{ recipe.title }}</h1>
@@ -22,12 +28,6 @@
             </section>
             <section class="recipe-ingredients">
                 <h2>Ingredients</h2>
-                <div class="toggle">
-                    <input id="switch-ingredients" class="switch" type="checkbox" checked>
-                    <label for="switch-ingredients" class="label-switch">
-                        <div class="ball"></div>
-                    </label>
-                </div>
                 <ul type="disc">
                 {% for ingredient in recipe.ingredients %}
                     <li>{{ ingredient }};</li>
@@ -36,12 +36,6 @@
             </section>
             <section class="recipe-preparation">
                 <h2>Preparation Method</h2>
-                <div class="toggle">
-                    <input id="switch-preparation" class="switch" type="checkbox" checked>
-                    <label for="switch-preparation" class="label-switch">
-                        <div class="ball"></div>
-                    </label>
-                </div>
                 <ol>
                 {% for direction in recipe.preparation %}
                     <li>{{ direction }}</li>
@@ -50,17 +44,9 @@
             </section>
             <section class="recipe-tips">
                 <h2>Recipe Tips</h2>
-                <div class="toggle">
-                    <input id="switch-tips" class="switch" type="checkbox" checked>
-                    <label for="switch-tips" class="label-switch">
-                        <div class="ball"></div>
-                    </label>
-                </div>
                 <p>{{ recipe.tips}}</p>
             </section>
         </div>
     </main>
-    
-    <script src="/scripts/recipe.js"></script>
 
 {% endblock %}

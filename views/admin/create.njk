@@ -1,0 +1,29 @@
+{% extends 'admin/layout.njk' %}
+
+{% block head %}
+
+    <title>Foodfy | New recipe</title>
+    <link rel="stylesheet" href="/styles/admin_fields.css">
+
+{% endblock %}
+
+{% block content %}
+
+    <main id="content">
+
+        <form action="/admin/recipes" method="POST">
+
+            <section class="title">
+                <h2>New recipe</h2>
+                <button class="save" type="submit">Save recipe</button>
+            </section>
+
+            {% include 'admin/fields.njk' %}
+
+        </form>
+
+    </main>
+
+    <script src="/scripts/admin_create.js"></script>
+
+{% endblock %}

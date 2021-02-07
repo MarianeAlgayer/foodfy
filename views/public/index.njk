@@ -1,9 +1,9 @@
-{% extends 'layout.njk' %}
+{% extends 'public/layout.njk' %}
 
 {% block head %}
 
-    <title>Foodfy | Home</title>
-    <link rel="stylesheet" href="/styles/home.css">
+    <title>Foodfy</title>
+    <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/recipes.css">
 
 {% endblock %}
@@ -27,7 +27,7 @@
             {% for recipe in recipes %}
                 <div class="recipe">
                     <div class="recipe-image-container">
-                        <img src="{{ recipe.image_01 }}" alt="{{ recipe.title }}">
+                        <img src="{{ recipe.image_png }}" alt="{{ recipe.title }}">
                     </div>
                     <div class="recipe-info">
                         <h1 class="recipe-name">{{ recipe.title }}</h1>
@@ -42,5 +42,3 @@
     <script src="/scripts/recipes.js"></script>
 
 {% endblock %}
-
-</html>

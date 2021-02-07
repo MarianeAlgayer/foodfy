@@ -1,0 +1,84 @@
+<section>
+    <div class="item">
+        <div>Recipe image (PNG, JPG,...)</div>
+        <div>
+            <input 
+                type="file" 
+                name="image_png"
+                accept="image/*"
+                value="{{ recipe.image_png }}"
+            >
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Recipe image (URL)</div>
+        <div>
+            <input 
+                type="url" 
+                name="image_url" 
+                placeholder="http://"
+                value="{{ recipe.image_url }}"
+            >
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Title</div>
+        <div>
+            <input 
+                type="text" 
+                name="title" 
+                value="{{ recipe.title }}"
+            >
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Author</div>
+        <div>
+            <input 
+                type="text" 
+                name="author" 
+                value="{{ recipe.author }}"
+            >
+        </div>
+    </div>
+
+    <div class="item" id="ingredients">
+        <div>Ingredients</div>
+        <div class="ingredient">
+            <input 
+                type="text" 
+                name="ingredients[]" 
+                value=""
+                placeholder="Ingredient"
+            >
+        </div>
+    </div>
+    <button type="button" class="add-ingredient">Add ingredient</button>
+
+    <div class="item" id="preparation">
+        <div>Preparation method</div>
+        <div class="preparation">
+            <input 
+                type="text" 
+                name="preparation[]" 
+                value=""
+                placeholder="Step"
+            >
+        </div>
+    </div>
+    <button type="button" class="add-step">Add step</button>
+
+    <div class="item">
+        <div>Additional information</div>
+        <div>
+            <input
+                type="text"
+                name="tips"
+                value="{{ recipe.tips }}"
+            >
+        </div>
+    </div>
+</section>
