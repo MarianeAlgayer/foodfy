@@ -40,20 +40,38 @@ body {
 
 /*== MENU ==*/
 
-#navigation {
-    width: 100%;
+#header-box {
     padding: 50px 0 50px;
+    background-color: var(--medium-black);
+}
+
+#navigation {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 90%;
+    max-width: 940px;
+    margin: auto;
     background-color: var(--medium-black);
 }
 
 #logo {
     font-family: 'Judson', serif;
     color: #FFFFFF;
-    margin-left: 22.2vw;
     font-size: 3rem;
     line-height: 3.3rem;
+    padding-right: 5vw;
     letter-spacing: 0.165rem;
     text-decoration: none;
+}
+
+#menu a {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    padding-left: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 #logo:hover {

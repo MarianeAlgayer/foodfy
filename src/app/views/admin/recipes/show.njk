@@ -2,8 +2,8 @@
 
 {% block head %}
 
-    <title>Foodfy | Details {{ recipe.title }}</title>
-    <link rel="stylesheet" href="/styles/admin_details.css">
+    <title>Foodfy | {{ recipe.title }}</title>
+    <link rel="stylesheet" href="/styles/admin_showRecipes.css">
 
 {% endblock %}
 
@@ -23,7 +23,7 @@
                 </div>
                 <div class="recipe-details">
                     <h1 class="recipe-name">{{ recipe.title }}</h1>
-                    <p class="chef">by {{ recipe.author }}</p>
+                    <p class="chef">by {{ recipe.chef_name }}</p>
                 </div>
             </section>
             <section class="recipe-ingredients">

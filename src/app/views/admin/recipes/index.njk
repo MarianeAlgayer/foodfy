@@ -3,7 +3,6 @@
 {% block head %}
 
     <title>Foodfy | Manage recipes</title>
-    <link rel="stylesheet" href="/styles/admin_index.css">
     <link rel="stylesheet" href="/styles/admin_recipes.css">
 
 {% endblock%}
@@ -21,19 +20,17 @@
             {% for recipe in recipes %}
                 <div class="recipe">
                     <div class="recipe-image-container">
-                        <img src="{{ recipe.image_png }}" alt="{{ recipe.title }}">
+                        <img src="{{ recipe.image_url }}" alt="{{ recipe.title }}">
                     </div>
                     <div class="recipe-info">
                         <h1 class="recipe-name">{{ recipe.title }}</h1>
-                        <h2 class="chef">by {{ recipe.author }}</h2>
-                        <p>View</p>
+                        <h2 class="chef">by {{ recipe.chef_name }}</h2>
+                        <a href="/admin/recipes/{{ recipe.id }}">View</a>
                     </div>
                 </div>
             {% endfor %}
 
         </section>
     </main>
-
-    <script src="/scripts/admin_recipes.js"></script>
 
 {% endblock %}

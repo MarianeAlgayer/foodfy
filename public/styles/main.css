@@ -9,6 +9,7 @@
     --dark-grey: #777777;
     --darker-grey: #444444;
     --light-pink: #FBDFDB;
+    --medium-purple: #6558C3;
 }
 
 * {
@@ -39,13 +40,18 @@ body {
 
 /*== MENU ==*/
 
-#navigation {
+header {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     width: 90%;
     max-width: 940px;
     margin: 50px auto 0;
+}
+
+#navigation {
+    display: flex;
+    align-items: center;
 }
 
 #logo {

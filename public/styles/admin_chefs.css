@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/*== TITLE ==*/
+
+#manage-chefs h2 {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/*== CHEFS ==*/
+
+#chefs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.chef {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 20px;
+}
+
+.chef-image-container img {
+    justify-content: center;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.chef-info {
+    align-self: center;
+}
+
+.chef-info h1 {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+.chef-info a {
+    color: var(--medium-purple);
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.6rem;
+    text-decoration: none;
+}

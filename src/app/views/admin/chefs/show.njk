@@ -1,0 +1,57 @@
+{% extends 'admin/layout.njk' %}
+
+{% block head %}
+
+    <title>Foodfy | {{ chef.name }}</title>
+    <link rel="stylesheet" href="/styles/admin_showChefs.css">
+    <link rel="stylesheet" href="/styles/admin_recipes.css">
+
+{% endblock %}
+
+{% block content %}
+
+    <main id="content">
+
+        <div class="title">
+            <h2>Chef: {{ chef.name }}</h2>
+            <a href="/admin/chefs/{{ chef.id }}/edit">Edit chef</a>
+        </div>
+
+        <div class="chef">
+            <section class="chef-intro">
+                <div class="chef-image-intro">
+                    <img src="{{ chef.avatar_url }}" alt="{{ chef.name }}">
+                </div>
+                <div class="chef-details">
+                    <h1 class="chef-name">{{ chef.name }}</h1>
+                    {% if chef.total_recipes == 0 %}
+                        <p>No recipes registered.</p>
+                    {% elif chef.total_recipes == 1 %}
+                        <p>{{ chef.total_recipes }} recipe</p>
+                    {% else %}
+                        <p>{{ chef.total_recipes }} recipes</p>
+                    {% endif %}
+                </div>
+            </section>
+
+            {% if chef.total_recipes > 0 %}
+                <section id="recipes">
+                    <h2>Recipes</h2>
+                    {% for recipe in recipes %}
+                        <div class="recipe">
+                            <div class="recipe-image-container">
+                                <img src="{{ recipe.image_png }}" alt="{{ recipe.title }}">
+                            </div>
+                            <div class="recipe-info">
+                                <h1 class="recipe-name">{{ recipe.title }}</h1>
+                                <h2 class="chef">by {{ recipe.chef_name}}</h2>
+                                <p>View</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </section>
+            {% endif %}
+        </div>
+    </main>
+
+{% endblock %}

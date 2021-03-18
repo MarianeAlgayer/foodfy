@@ -2,7 +2,7 @@
 
 {% block head %}
 
-    <title>Foodfy | New recipe</title>
+    <title>Foodfy | New chef</title>
     <link rel="stylesheet" href="/styles/admin_fields.css">
 
 {% endblock %}
@@ -11,14 +11,14 @@
 
     <main id="content">
 
-        <form action="/admin/recipes" method="POST">
+        <form action="/admin/chefs" method="POST">
 
             <section class="title">
-                <h2>New recipe</h2>
-                <button class="save" type="submit">Save recipe</button>
+                <h2>New chef</h2>
+                <button class="save" type="submit">Save chef</button>
             </section>
 
-            {% include 'admin/fields.njk' %}
+            {% include 'admin/chefs/fields.njk' %}
 
         </form>
 

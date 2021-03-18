@@ -1,17 +1,5 @@
 <section>
     <div class="item">
-        <div>Recipe image (PNG, JPG,...)</div>
-        <div>
-            <input 
-                type="file" 
-                name="image_png"
-                accept="image/*"
-                value="{{ recipe.image_png }}"
-            >
-        </div>
-    </div>
-
-    <div class="item">
         <div>Recipe image (URL)</div>
         <div>
             <input 
@@ -35,14 +23,18 @@
     </div>
 
     <div class="item">
-        <div>Author</div>
+        <div>Chef</div>
         <div>
-            <input 
-                type="text" 
-                name="author" 
-                value="{{ recipe.author }}"
-            >
-        </div>
+            <select name="chef">
+                {% for chef in chefOptions %}
+                    <option 
+                        value="{{ chef.id }}"
+                        {% if recipe.chef_id == chef.id %} selected {% endif %}
+                    >
+                        {{ chef.name }}
+                    </option>
+                {% endfor %}
+            </select>
     </div>
 
     <div class="item" id="ingredients">
@@ -52,7 +44,6 @@
                 type="text" 
                 name="ingredients[]" 
                 value=""
-                placeholder="Ingredient"
             >
         </div>
     </div>
@@ -65,7 +56,6 @@
                 type="text" 
                 name="preparation[]" 
                 value=""
-                placeholder="Step"
             >
         </div>
     </div>

@@ -12,13 +12,25 @@
         {% endblock %}
         
         <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="/styles/admin_main.css">
+        <link rel="stylesheet" href="/styles/main.css">
         <link rel="stylesheet" href="/styles/responsive.css">
     </head>
 
     <body>
-        <header id="navigation">
-            <a  id="logo" href="/">Foodfy</a>
+        <header>
+            <div id="navigation">
+                <a  id="logo" href="/">Foodfy</a>
+                <nav id="menu">
+                    <a href="/about">About</a>
+                    <a href="/recipes">Recipes</a>
+                    <a href="/chefs">Chefs</a>
+                </nav>
+            </div>
+
+            {% block filter %}
+
+            {% endblock %}
+            
         </header>
 
         {% block content %}

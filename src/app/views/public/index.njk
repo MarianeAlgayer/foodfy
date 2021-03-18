@@ -5,6 +5,23 @@
     <title>Foodfy</title>
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/recipes.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+{% block filter %}
+
+    <form action="/recipes" method="GET">
+        <input 
+            type="text" 
+            name="filter" 
+            placeholder="Find a recipe"
+            value={{filter}}
+        >
+        <button type="submit">
+            <span class="material-icons">search</span>
+        </button>
+    </form>
 
 {% endblock %}
 
@@ -27,18 +44,19 @@
             {% for recipe in recipes %}
                 <div class="recipe">
                     <div class="recipe-image-container">
-                        <img src="{{ recipe.image_png }}" alt="{{ recipe.title }}">
+                        <img src="{{ recipe.image_url }}" alt="{{ recipe.title }}">
                     </div>
                     <div class="recipe-info">
-                        <h1 class="recipe-name">{{ recipe.title }}</h1>
-                        <p class="chef">by {{ recipe.author }}</p>
+                        <div>
+                            <h1 class="recipe-name">{{ recipe.title }}</h1>
+                            <p class="chef">by {{ recipe.chef_name }}</p>
+                        </div>
+                        <a href="/recipes/{{ recipe.id }}">View</a>
                     </div>
                 </div>
             {% endfor %}
 
         </section>
     </main>
-
-    <script src="/scripts/recipes.js"></script>
 
 {% endblock %}
